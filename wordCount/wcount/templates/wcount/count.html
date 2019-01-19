@@ -1,0 +1,34 @@
+<head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div class="alert alert-primary" role="alert">
+    <h2>Count Value</h2>
+</div>
+</br>
+<h3>The text is '{{ fulltext }}'</h3>
+</br>
+<table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Word</th>
+            <th scope="col">Count</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for k,v in word_list_count %}
+          <tr>
+            <th scope="row">1</th>
+            <td>{{ k }}</td>
+            <td>{{ v }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+<h5><a href = {% url 'home'%}>Try Again</a></h5>
